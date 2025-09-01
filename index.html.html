@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Arte em Prática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1f316f;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: #1f316f;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .menu-btn {
+            background-color: #b4d6cd;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .menu-btn:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            max-width: 1400px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .text-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .text-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .text-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .access-btn {
+            background-color: #ff4e88;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .access-btn:hover {
+            opacity: 0.8;
+        }
+
+        .video-container {
+            flex: 1;
+            max-width: 800px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px; /* Aumenta a altura do vídeo */
+        }
+
+        .video-container img {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="menu-btn" onclick="window.location.href='paginaInicial.html'">Introdução</button>
+        <button class="menu-btn" onclick="window.location.href='certificado.html'">Certificado</button>
+        <button class="menu-btn" onclick="window.location.href='contato.html'">Contato</button>
+    </header>
+
+    <div class="content">
+        <div class="text-content">
+            <h1>A Arte em Prática</h1>
+            <h2>Curso gratuito de desenho. Do papel ao digital. Esse é um projeto nacional Aldir Blanc PNAB- GOIÁS 2024</h2>
+            <button class="access-btn" onclick="window.location.href='acessarcurso.html'">Acessar curso</button>
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/uIItGPUBq0M?si=G4HSfZCRGYDzcKSV" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="img/paulogustavo.jpg" alt="Miniatura do vídeo">
+        </div>
+    </div>
+</body>
+
+</html>
+

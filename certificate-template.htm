@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificado</title>
+    <style>
+        body {
+            background-color: #1f316f;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas {
+            border: 1px solid #000;
+        }
+        /* Importa a fonte do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <canvas id="certificadoCanvas" width="1056" height="816"></canvas>
+    <script>
+        function desenharCertificado(nome, data, horas) {
+            const canvas = document.getElementById('certificadoCanvas');
+            const contexto = canvas.getContext('2d');
+            const imagem = new Image();
+
+            imagem.onload = function() {
+                // Desenha a imagem de fundo
+                contexto.drawImage(imagem, 0, 0);
+
+                // Define as configurações do texto
+                contexto.textAlign = 'center';
+
+                // Adiciona o nome com a cor especificada
+                contexto.font = 'bold 40px Quattrocento'; // Usa a fonte Quattrocento
+                contexto.fillStyle = '#303865'; // Cor do nome
+                contexto.fillText(nome, 380, 350); // Ajuste a posição conforme necessário
+
+                // Adiciona a data com a cor especificada e tamanho menor
+                contexto.font = 'bold 24px Quattrocento'; // Reduz o tamanho da fonte
+                contexto.fillStyle = '#2e3540'; // Cor da data
+                contexto.fillText(data, 590, 433); // Ajuste a posição conforme necessário
+
+                // Adiciona as horas com a cor especificada e tamanho menor
+                contexto.font = 'bold 24px Quattrocento'; // Reduz o tamanho da fonte
+                contexto.fillStyle = '#2e3540'; // Cor das horas
+                contexto.fillText(horas, 370, 458); // Ajuste a posição conforme necessário
+            };
+
+            imagem.src = 'img/certificado mod data.jpg'; // Caminho da imagem
+        }
+
+        // Substitua os valores abaixo pelos dados reais
+        desenharCertificado('Nome do Aluno', '01/01/2024', '10:00');
+    </script>
+</body>
+</html>

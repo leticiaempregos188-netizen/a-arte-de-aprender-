@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solicitação de Certificado</title>
+</head>
+<body>
+    <h1>Solicitação de Certificado</h1>
+    <form id="solicitacaoForm">
+        <label for="acertos">Número total de acertos (em 28 questões):</label>
+        <input type="number" id="acertos" name="acertos" min="0" max="28" required>
+        <button type="button" onclick="verificarCertificado()">Solicitar Certificado</button>
+    </form>
+    <div id="resultado"></div>
+    
+    <script>
+        function verificarCertificado() {
+            const acertos = parseInt(document.getElementById('acertos').value, 10);
+            const totalQuestoes = 28; // 7 questionários com 4 questões cada
+            const porcentagemAcertos = (acertos / totalQuestoes) * 100;
+            const resultadoDiv = document.getElementById('resultado');
+
+            if (porcentagemAcertos >= 70) {
+                resultadoDiv.innerHTML = '<p>Parabéns! Você pode solicitar seu certificado. <a href="certificado.html" download>Baixar Certificado</a></p>';
+            } else {
+                resultadoDiv.innerHTML = '<p>Você não atingiu o percentual necessário de acertos para solicitar o certificado.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
+
+

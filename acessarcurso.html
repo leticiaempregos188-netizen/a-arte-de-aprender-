@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos curso</title>
+    <style>
+        body {
+            background-color: #7695ff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: right;
+            padding: 20px;
+        }
+
+        .menu-btn {
+            background-color: #b4d6cd;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .menu-btn:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            display: flex;
+            max-width: 1400px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li button {
+            width: 100%;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 30px;
+        }
+
+        .sidebar ul li button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .image-box {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="menu-btn" onclick="window.location.href='paginaInicial.html'">Introdução</button>
+        <button class="menu-btn" onclick="window.location.href='certificado.html'">Certificado</button>
+        <button class="menu-btn" onclick="window.location.href='contato.html'">Contato</button>
+    </header>
+
+    <div class="content">
+        <div class="sidebar">
+            <ul>
+                <li><button onclick="window.location.href='videoaula1.html'">Módulo 1</button></li>
+                <li><button onclick="window.location.href='videoaula2.html'">Módulo 2</button></li>
+                <li><button onclick="window.location.href='videoaula3.html'">Módulo 3</button></li>
+                <li><button onclick="window.location.href='videoaula4.html'">Módulo 4</button></li>
+                <li><button onclick="window.location.href='videoaula5.html'">Módulo 5</button></li>
+                <li><button onclick="window.location.href='videoaula6.html'">Módulo 6</button></li>
+                <li><button onclick="window.location.href='videoaula7.html'">Módulo 7</button></li>
+            </ul>
+        </div>
+
+        <div class="image-box">
+            <img src="img/imagem test site.jpg" alt="Imagem relacionada ao curso">
+        </div>
+    </div>
+</body>
+</html>
